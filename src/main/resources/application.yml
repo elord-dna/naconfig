@@ -1,0 +1,34 @@
+spring:
+  cloud:
+    nacos:
+      discovery: localhost:8848
+#      config:
+#        file-extension: yml
+#        server-addr: localhost:8848
+#        group: abc
+  application:
+    name: abc
+  profile:
+    active: dev
+
+dubbo:
+  application:
+    name: abc
+  registry:
+    address: nacos://localhost:8848
+    username: nacos
+    password: nacos
+    use-as-metadata-center: false
+  #    parameters[namespace]: 80d01f60-c530-47ae-80f9-b1283ca41ab3
+  protocol:
+    name: dubbo
+    port: 19508
+  consumer:
+    check: false
+    timeout: 30000
+    retries: 5
+
+#nacos:
+#  config:
+#    auto-refresh: true
+#    enable-remote-sync-config: true

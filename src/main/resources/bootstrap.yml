@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      #      discovery: localhost:8848
+      config:
+        file-extension: yml
+        server-addr: localhost:8848
+        group: abc
+#        refresh-enabled: true
+#        auto-refresh: true
+#        enable-remote-sync-config: true
